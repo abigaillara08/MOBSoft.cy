@@ -32,10 +32,16 @@ describe('template spec', () => {
     
       cy.get('.breadcrumbs__browse').should('be.visible').contains('You Are Here').click();
       cy.go(-1);
+        cy.visit('http://mobsoft.mx/services/');
+
       cy.get('.breadcrumbs__item-link').should('be.visible').contains('Home').click();
       cy.go(-1);
+        cy.visit('http://mobsoft.mx/services/');
+
       cy.get('.breadcrumbs__item-target').should('be.visible').contains('Services').click();
       cy.go(-1);
+        cy.visit('http://mobsoft.mx/services/');
+
 
     //TEXT
       cy.get('.entry-content > :nth-child(1)').should('be.visible').contains('At Mobsoft, we’re more than just fun people. We’re also a team of expert game developers, artists, and consultants.');
@@ -191,7 +197,7 @@ describe('template spec', () => {
       
     });
 
-    it.only('CONTACT US', () => {
+    it('CONTACT US', () => {
 
       cy.get('#menu-item-66 > a').should('be.visible').click().wait(1000);
     
@@ -273,6 +279,8 @@ describe('template spec', () => {
       cy.visit('http://mobsoft.mx/contact/');
       cy.scrollTo('bottom').wait(200);
       cy.get('#toTop').click();
+
+      cy.viewport(1200, 1024)
 
     });
   
