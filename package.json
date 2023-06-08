@@ -1,0 +1,11 @@
+{
+  "name": "mobsoft",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress open"    
+  },
+  "author": "Abigail Lara Díaz",
+  "license": "ISC"
+}
